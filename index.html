@@ -3,67 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Tech Company</title>
+    <title>Stephen Pak's Homepage</title>
     <style>
         body {
             background-color: black;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        h1, h2, h3 {
+            color: #3B82F6;
         }
-        header {
-            text-align: center;
-            padding: 50px 0;
-        }
-        h1 {
-            font-size: 48px;
-            color: #5c8dfd;
-        }
-        .hero {
-            background-color: rgba(92, 141, 253, 0.2);
-            border-radius: 10px;
-            padding: 60px 30px;
-            margin: 20px 0;
-        }
-        .hero h2 {
-            font-size: 36px;
-        }
-        .contact {
-            margin-top: 40px;
-        }
-        .contact a {
-            color: #5c8dfd;
+        a {
+            color: #60A5FA;
             text-decoration: none;
-            border: 2px solid #5c8dfd;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
         }
-        .contact a:hover {
-            background-color: #5c8dfd;
-            color: black;
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: black;
+            padding: 10px;
+            z-index: 1000;
+            border-bottom: 2px solid #3B82F6;
+        }
+        nav a {
+            margin: 0 15px;
+        }
+        section {
+            margin: 50px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+        .tag {
+            background-color: #3B82F6;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 5px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Welcome to Our Tech Company</h1>
-        </header>
-        <div class="hero">
-            <h2>Your Technology, Our Future</h2>
-            <p>Innovating for a better tomorrow with cutting-edge solutions.</p>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact Me</a>
+    </nav>
+    <header>
+        <section class="hero">
+            <h1>Stephen Pak</h1>
+            <img src="profile-image.jpg" alt="Profile Image" style="border-radius: 50%; width: 150px;" />
+            <p>I am the Director at Meta</p>
+        </section>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my personal website. I am currently the Director at Meta, with extensive experience at Amazon, Booz Allen, and the Air Force.</p>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>Director at Meta</li>
+            <li>Senior Engineer at Amazon</li>
+            <li>Consultant at Booz Allen
+            <li>Officer at United States Air Force</li>
+        </ul>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>MBA, Darden School of Business</li>
+            <li>B.S. in Computer Science, University of Maryland</li>
+            <li>USAF Academy</li>
+        </ul>
+    </section>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>AI/ML Professional Certification</li>
+        </ul>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div>
+            <span class="tag">AI/ML</span>
+            <span class="tag">Leadership</span>
+            <span class="tag">Project Management</span>
+            <span class="tag">Cloud Computing</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Software Development</span>
+            <span class="tag">Strategic Planning</span>
+            <span class="tag">Agile Methodologies</span>
+            <span class="tag">Systems Engineering</span>
+            <span class="tag">Cybersecurity</span>
         </div>
-        <div class="contact">
-            <a href="mailto:contact@techcompany.com">Contact Us</a>
-        </div>
-    </div>
+    </section>
+    <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+            <li>Publication 1</li>
+            <li>Publication 2</li>
+            <li>Publication 3</li>
+            <li>Publication 4</li>
+            <li>Publication 5</li>
+            <li>Publication 6</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:stephen@example.com">stephen@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/stephen-pak">Stephen Pak LinkedIn</a></p>
+    </section>
 </body>
 </html>
