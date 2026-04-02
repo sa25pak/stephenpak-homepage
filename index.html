@@ -3,121 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephen Pak's Homepage</title>
+    <title>Stephen Pak - Professional Homepage</title>
     <style>
         body {
-            background-color: black;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
         }
-        h1, h2, h3 {
-            color: #3B82F6;
-        }
-        a {
-            color: #60A5FA;
-            text-decoration: none;
-        }
+        /* Sticky Navigation Menu Styles */
         nav {
             position: sticky;
             top: 0;
-            background-color: black;
-            padding: 10px;
-            z-index: 1000;
+            background-color: #000;
             border-bottom: 2px solid #3B82F6;
+            padding: 10px;
         }
         nav a {
-            margin: 0 15px;
+            color: #60A5FA;
+            padding: 10px 15px;
+            text-decoration: none;
         }
-        section {
-            margin: 50px 0;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-        }
-        .tag {
+        nav a:hover {
             background-color: #3B82F6;
-            border-radius: 5px;
-            padding: 5px 10px;
-            margin: 5px;
-            display: inline-block;
+        }
+        /* Hero Section Styles */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #1a1a1a;
+        }
+        /* Summary and Experience Section Styles */
+        .summary, .experience {
+            padding: 20px;
+        }
+        /* Skills and Awards Styles */
+        .skills, .awards {
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#skills">Skills</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact Me</a>
-    </nav>
-    <header>
-        <section class="hero">
-            <h1>Stephen Pak</h1>
-            <img src="profile-image.jpg" alt="Profile Image" style="border-radius: 50%; width: 150px;" />
-            <p>I am the Director at Meta</p>
-        </section>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my personal website. I am currently the Director at Meta, with extensive experience at Amazon, Booz Allen, and the Air Force.</p>
-    </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li>Director at Meta</li>
-            <li>Senior Engineer at Amazon</li>
-            <li>Consultant at Booz Allen
-            <li>Officer at United States Air Force</li>
-        </ul>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li>MBA, Darden School of Business</li>
-            <li>B.S. in Computer Science, University of Maryland</li>
-            <li>USAF Academy</li>
-        </ul>
-    </section>
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>AI/ML Professional Certification</li>
-        </ul>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <div>
-            <span class="tag">AI/ML</span>
-            <span class="tag">Leadership</span>
-            <span class="tag">Project Management</span>
-            <span class="tag">Cloud Computing</span>
-            <span class="tag">Data Analysis</span>
-            <span class="tag">Software Development</span>
-            <span class="tag">Strategic Planning</span>
-            <span class="tag">Agile Methodologies</span>
-            <span class="tag">Systems Engineering</span>
-            <span class="tag">Cybersecurity</span>
-        </div>
-    </section>
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li>Publication 1</li>
-            <li>Publication 2</li>
-            <li>Publication 3</li>
-            <li>Publication 4</li>
-            <li>Publication 5</li>
-            <li>Publication 6</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:stephen@example.com">stephen@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/stephen-pak">Stephen Pak LinkedIn</a></p>
-    </section>
+
+<nav>
+    <a href="#hero">Home</a>
+    <a href="#summary">Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#awards">Awards</a>
+    <a href="#interests">Interests</a>
+    <a href="#board">Board Experience</a>
+</nav>
+
+<section class="hero" id="hero">
+    <h1>Stephen Pak</h1>
+    <h2>Leading AI-enabled Transformation</h2>
+</section>
+
+<section class="summary" id="summary">
+    <h3>Professional Summary</h3>
+    <p>Experienced leader driving AI-enabled transformation at Meta and Amazon, with an MBA and military background.</p>
+</section>
+
+<section class="experience" id="experience">
+    <h3>Experience</h3>
+    <h4>Director at Meta (2018-Present)</h4>
+    <p>Leading enterprise support and LLM initiatives.</p>
+    <h4>Amazon (2013-2018)</h4>
+    <p>Managed eTextbook and Prime Now roles, overseeing hundreds of millions in P&L.</p>
+    <h4>Booz Allen Hamilton (2011-2013)</h4>
+    <p>Consulting and strategic advisory roles.</p>
+    <h4>US Air Force (1999-2010)</h4>
+    <p>Served as Special Agent with a focus on counterintelligence operations.</p>
+</section>
+
+<section class="education" id="education">
+    <h3>Education</h3>
+    <p>Darden School of Business - MBA</p>
+    <p>University of Maryland - BS in Criminal Justice</p>
+</section>
+
+<section class="skills" id="skills">
+    <h3>Skills</h3>
+    <ul>
+        <li>AI Strategy</li>
+        <li>P&L Management</li>
+        <li>LLMOps</li>
+        <li>Risk Governance</li>
+        <li>Organizational Design</li>
+        <li>Customer Experience</li>
+    </ul>
+</section>
+
+<section class="awards" id="awards">
+    <h3>Awards</h3>
+    <ul>
+        <li>Department of Defense Counterintelligence Agent of the Year</li>
+        <li>Bronze Star</li>
+    </ul>
+</section>
+
+<section class="interests" id="interests">
+    <h3>Interests</h3>
+    <p>Adventures and historical non-fiction.</p>
+</section>
+
+<section class="board" id="board">
+    <h3>Board Experience</h3>
+    <p>NorthWest Education Access (2014-2016)</p>
+</section>
+
 </body>
 </html>
