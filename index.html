@@ -5,117 +5,425 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stephen Pak - Professional Homepage</title>
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
+            padding: 0;
+            box-sizing: border-box;
         }
-        /* Sticky Navigation Menu Styles */
-        nav {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0e27;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        header {
             position: sticky;
             top: 0;
-            background-color: #000;
-            border-bottom: 2px solid #3B82F6;
-            padding: 10px;
+            background-color: #1a1f3a;
+            border-bottom: 2px solid #3b82f6;
+            padding: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(59, 130, 246, 0.1);
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3b82f6;
         }
         nav a {
-            color: #60A5FA;
-            padding: 10px 15px;
+            color: #a0aec0;
             text-decoration: none;
+            padding: 8px 12px;
+            margin: 0 5px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 14px;
         }
         nav a:hover {
-            background-color: #3B82F6;
+            color: #3b82f6;
+            background-color: rgba(59, 130, 246, 0.1);
         }
-        /* Hero Section Styles */
         .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(135deg, #1a1f3a 0%, #2d3561 100%);
+            padding: 80px 20px;
             text-align: center;
-            background-color: #1a1a1a;
+            border-bottom: 2px solid #3b82f6;
         }
-        /* Summary and Experience Section Styles */
-        .summary, .experience {
-            padding: 20px;
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        /* Skills and Awards Styles */
-        .skills, .awards {
-            padding: 20px;
+        .hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #3b82f6;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        .hero h1 {
+            font-size: 48px;
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            color: #a0aec0;
+            margin-bottom: 20px;
+        }
+        .hero-title {
+            font-size: 28px;
+            color: #cbd5e1;
+            font-weight: 300;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #2d3561;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            font-size: 32px;
+            color: #3b82f6;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3b82f6;
+        }
+        h3 {
+            font-size: 22px;
+            color: #60a5fa;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h4 {
+            font-size: 18px;
+            color: #93c5fd;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #cbd5e1;
+        }
+        li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        .experience-item {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #2d3561;
+        }
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        .company {
+            font-size: 20px;
+            color: #60a5fa;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .years {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+        .role {
+            font-size: 16px;
+            color: #93c5fd;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .skill-item {
+            background-color: #1a1f3a;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            color: #cbd5e1;
+        }
+        .certification-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #2d3561;
+        }
+        .certification-item:last-child {
+            border-bottom: none;
+        }
+        .cert-title {
+            color: #60a5fa;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .cert-provider {
+            color: #64748b;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #1a1f3a;
+            text-align: center;
+            padding: 30px 20px;
+            color: #64748b;
+            border-top: 2px solid #3b82f6;
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="#hero">Home</a>
-    <a href="#summary">Summary</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#awards">Awards</a>
-    <a href="#interests">Interests</a>
-    <a href="#board">Board Experience</a>
-</nav>
+<header>
+    <div class="header-container">
+        <div class="logo">Stephen Pak</div>
+        <nav>
+            <a href="#summary">Summary</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#awards">Awards</a>
+            <a href="#interests">Interests</a>
+            <a href="#board">Board</a>
+        </nav>
+    </div>
+</header>
 
-<section class="hero" id="hero">
-    <h1>Stephen Pak</h1>
-    <h2>Leading AI-enabled Transformation</h2>
-</section>
+<div class="hero">
+    <div class="hero-content">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQGYioKteIcq4A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1722117313151?e=1766016000&v=beta&t=w1NvBz0VuJxngVy076UUR5ip2yshkQ3VYM_KbD5l8-Y" alt="Stephen Pak">
+        <h1>Stephen Pak</h1>
+        <p class="hero-title">Senior Technology & Operations Executive</p>
+        <p>Leading AI-Enabled Transformation, Customer Experience & Scaled Global Operations</p>
+    </div>
+</div>
 
-<section class="summary" id="summary">
-    <h3>Professional Summary</h3>
-    <p>Experienced leader driving AI-enabled transformation at Meta and Amazon, with an MBA and military background.</p>
-</section>
+<div class="container">
+    <section id="summary">
+        <h2>Professional Summary</h2>
+        <p>Senior technology and operations executive with proven success leading AI-enabled transformation, customer experience, and scaled global operations across Meta and Amazon. MBA, Former military officer, and non-profit board member. Strong fit for COO, President, Chief Customer Officer, and Board Director roles in technology, AI, Direct to Consumer (DTC) / e-commerce, platforms, and scaling companies.</p>
+        
+        <h3>Track Record</h3>
+        <ul>
+            <li>Exceeding goals managing P&L's >$500M global business units across digital and retail businesses</li>
+            <li>Applied ML, LLMs, agentic AI, and automation to redesign workflows</li>
+            <li>Leading multi-layer, cross-functional organizations in high-complexity global business units</li>
+            <li>Driving product quality and customer experience improvements across billions of user interactions</li>
+            <li>Integrating product, engineering, policy, and operations for measurable impact</li>
+        </ul>
+    </section>
 
-<section class="experience" id="experience">
-    <h3>Experience</h3>
-    <h4>Director at Meta (2018-Present)</h4>
-    <p>Leading enterprise support and LLM initiatives.</p>
-    <h4>Amazon (2013-2018)</h4>
-    <p>Managed eTextbook and Prime Now roles, overseeing hundreds of millions in P&L.</p>
-    <h4>Booz Allen Hamilton (2011-2013)</h4>
-    <p>Consulting and strategic advisory roles.</p>
-    <h4>US Air Force (1999-2010)</h4>
-    <p>Served as Special Agent with a focus on counterintelligence operations.</p>
-</section>
+    <section id="experience">
+        <h2>Experience</h2>
+        
+        <div class="experience-item">
+            <div class="company">Meta</div>
+            <div class="years">2018 - Present</div>
+            
+            <div class="role">Director, Head of Enterprise Support, Business Product & Technical Support, Monetization</div>
+            <ul>
+                <li>Lead the Global Support organization and strategy for Meta's enterprise products such as Ads, Business Messaging, Business AI, Subscriptions, etc.</li>
+                <li>Lead the strategy to enable and deploy LLMs and agentic AI workflows to accelerate issue identification, reduce operational cost, and enhance advertiser and user experience across all Meta Customer Support</li>
+                <li>Reduced OPEX by hundreds of millions of dollars annually, while increasing revenue, resolutions, and CSAT</li>
+            </ul>
+            
+            <div class="role" style="margin-top: 25px;">Director, Product Operations — Family of Apps & Reality Labs</div>
+            <ul>
+                <li>Rebuilt and scaled Product Operations supporting major products across Meta's ecosystem</li>
+                <li>Delivered significant cost reductions (up to 70%), improved product quality by 30%, and implemented AI-driven workflow automation</li>
+            </ul>
+            
+            <div class="role" style="margin-top: 25px;">Director, Product Integrity Operations</div>
+            <ul>
+                <li>Directed global operations removing violating content across Facebook and Instagram</li>
+                <li>Built and led an org of 80+ program managers spanning Product, Policy, Comms, Ops, and Privacy</li>
+                <li>Executive sponsor for culture, veterans, and growth & development across a 2,000+ person operations org</li>
+            </ul>
+        </div>
 
-<section class="education" id="education">
-    <h3>Education</h3>
-    <p>Darden School of Business - MBA</p>
-    <p>University of Maryland - BS in Criminal Justice</p>
-</section>
+        <div class="experience-item">
+            <div class="company">Amazon.com</div>
+            <div class="years">2013 - 2018</div>
+            
+            <div class="role">Head of eTextbook Product Management, Amazon Education</div>
+            <ul>
+                <li>Owned a hundreds-of-millions P&L across 14 countries</li>
+                <li>Led product management, pricing, analytics, growth, marketing, and professional segment digital learning product strategy</li>
+                <li>Launched video learning and digital journal subscriptions</li>
+            </ul>
+            
+            <div class="role" style="margin-top: 25px;">Sr. Program Manager, Prime Now 0→1 Team</div>
+            <ul>
+                <li>Designed and launched 1-2 hour delivery in seven major markets</li>
+                <li>Negotiated partnerships, marketplace deals, content acquisition, and category expansions to drive adoption</li>
+            </ul>
+            
+            <div class="role" style="margin-top: 25px;">Sr. Vendor Manager, Retail</div>
+            <ul>
+                <li>Managed three category P&Ls in Kitchen as Senior Buyer for Cooking Appliances, Cookware, and Food Preparation</li>
+                <li>Negotiated with 1K+ vendors carrying 15K+ products</li>
+                <li>Led seven free cash flow operations improvement projects</li>
+                <li>Only GM in the organization who exceeded revenue and profitability goals consistently</li>
+            </ul>
+        </div>
 
-<section class="skills" id="skills">
-    <h3>Skills</h3>
-    <ul>
-        <li>AI Strategy</li>
-        <li>P&L Management</li>
-        <li>LLMOps</li>
-        <li>Risk Governance</li>
-        <li>Organizational Design</li>
-        <li>Customer Experience</li>
-    </ul>
-</section>
+        <div class="experience-item">
+            <div class="company">Booz Allen Hamilton</div>
+            <div class="years">2011 - 2013</div>
+            <div class="role">Associate, Strategic Innovations Group</div>
+            <ul>
+                <li>Built a new strategy, policy, change management and process improvements across three intelligence agencies</li>
+                <li>Enabled thousands of employees around the world to collaborate and share critical information</li>
+            </ul>
+        </div>
 
-<section class="awards" id="awards">
-    <h3>Awards</h3>
-    <ul>
-        <li>Department of Defense Counterintelligence Agent of the Year</li>
-        <li>Bronze Star</li>
-    </ul>
-</section>
+        <div class="experience-item">
+            <div class="company">United States Air Force</div>
+            <div class="years">1999 - 2010</div>
+            <div class="role">Special Agent, Air Force Office of Special Investigations</div>
+            <ul>
+                <li>Led criminal, counterterrorism, fraud, and counterintelligence operations across 17 field offices and 200+ agents globally</li>
+                <li>Designed training programs that increased investigative productivity by 340%</li>
+                <li>Deployed to Afghanistan as a mission-focused operations officer, conducting 50+ combat missions</li>
+                <li>Served as security advisor to the Under Secretary of the Air Force</li>
+            </ul>
+        </div>
+    </section>
 
-<section class="interests" id="interests">
-    <h3>Interests</h3>
-    <p>Adventures and historical non-fiction.</p>
-</section>
+    <section id="education">
+        <h2>Education</h2>
+        <h3>University of Virginia - Darden School of Business</h3>
+        <p>MBA</p>
+        
+        <h3>University of Maryland University College</h3>
+        <p>B.S., Criminal Justice</p>
+        
+        <h3>Military Leadership</h3>
+        <p>Various Military Leadership Courses including Air Force Officer Training School</p>
+    </section>
 
-<section class="board" id="board">
-    <h3>Board Experience</h3>
-    <p>NorthWest Education Access (2014-2016)</p>
-</section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">AI Strategy & Enterprise Transformation</div>
+            <div class="skill-item">P&L Management & Business Go to Market Growth</div>
+            <div class="skill-item">Support Engineering Management</div>
+            <div class="skill-item">Large-Scale Operations & LLMOps</div>
+            <div class="skill-item">Trust & Safety / Integrity</div>
+            <div class="skill-item">Risk, Governance, Compliance & Regulatory</div>
+            <div class="skill-item">Organizational Design & Talent Development</div>
+            <div class="skill-item">Customer Experience</div>
+            <div class="skill-item">AI Assisted Development</div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        
+        <div class="certification-item">
+            <div class="cert-title">AI for Business Specialization</div>
+            <div class="cert-provider">Wharton Online</div>
+            <p>AI Fundamentals • AI in Marketing/Operations • People Analytics • AI Strategy & Ethics</p>
+        </div>
+        
+        <div class="certification-item">
+            <div class="cert-title">Agentic AI</div>
+            <div class="cert-provider">DeepLearning.AI</div>
+        </div>
+        
+        <div class="certification-item">
+            <div class="cert-title">Large Language Model Operations (LLMOps)</div>
+            <div class="cert-provider">DeepLearning.AI</div>
+        </div>
+        
+        <div class="certification-item">
+            <div class="cert-title">AI Python for Beginners</div>
+            <div class="cert-provider">DeepLearning.AI</div>
+        </div>
+        
+        <div class="certification-item">
+            <div class="cert-title">AI Engineering (RAG, QLoRA, LLM fine-tuning)</div>
+            <div class="cert-provider">Udemy</div>
+        </div>
+        
+        <div class="certification-item">
+            <div class="cert-title">Agentic AI Systems</div>
+            <div class="cert-provider">Udemy</div>
+        </div>
+        
+        <div class="certification-item">
+            <div class="cert-title">AI Leadership Track: Gen AI, Agentic AI for Business Leaders</div>
+            <div class="cert-provider">Udemy</div>
+        </div>
+        
+        <div class="certification-item">
+            <div class="cert-title">Prompt Engineering Bootcamp</div>
+            <div class="cert-provider">Udemy</div>
+        </div>
+        
+        <div class="certification-item">
+            <div class="cert-title">Generative AI App Development</div>
+            <div class="cert-provider">Udemy</div>
+        </div>
+    </section>
+
+    <section id="awards">
+        <h2>Awards & Honors</h2>
+        <ul>
+            <li>Department of Defense Counterintelligence Agent of the Year (#1 of 4,000+)</li>
+            <li>Bronze Star</li>
+            <li>AF Meritorious Service (one oak leaf cluster)</li>
+            <li>AF Commendation (two oak leaf clusters)</li>
+            <li>AF Achievement (two oak leaf clusters)</li>
+            <li>Army Achievement</li>
+            <li>AF Outstanding Unit w/Valor</li>
+        </ul>
+    </section>
+
+    <section id="interests">
+        <h2>Interests</h2>
+        <p>Adventures with my wife, keeping my three boys out of urgent care, nerding out historical non-fiction books, podcasts, education reform, all things basketball, competitive shooting, CrossFit, and hiking (last trip was Chamonix)</p>
+    </section>
+
+    <section id="board">
+        <h2>Board & Advisory Experience</h2>
+        <div class="experience-item">
+            <div class="company">NorthWest Education Access</div>
+            <div class="years">2014 - 2016</div>
+            <div class="role">Board Member</div>
+            <ul>
+                <li>Governance, strategy, fundraising, and community engagement oversight</li>
+                <li>Served on business engagement & strategic planning committees</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Stephen Pak. All rights reserved.</p>
+    <p>References available upon request</p>
+</footer>
 
 </body>
 </html>
