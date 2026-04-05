@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sa25pak.github.io/stephenpak-homepage/sitemap.xml
